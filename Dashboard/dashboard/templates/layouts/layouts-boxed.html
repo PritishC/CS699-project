@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block html_class %}boxed{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Layouts" parent_dir="Layouts" child_dir="Boxed" %}
+</section>
+{% endblock content %}

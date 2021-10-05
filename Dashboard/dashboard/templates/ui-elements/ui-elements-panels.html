@@ -1,0 +1,541 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Panels" %}
+    <h3 class="mt-none">Basic</h3>
+    <p class="mb-lg">By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.</p>
+    <section class="panel">
+        <div class="panel-body">
+            Content.
+        </div>
+    </section>
+    <h3>Panel with Heading</h3>
+    <p class="mb-lg">Easily add a heading container to your panel with <code>.panel-heading</code>. You may also include any <code>h1</code> - <code>h6</code> with a <code>.panel-title</code> class to add a pre-styled heading.</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    Content.
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    Content.
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <h3>Panel with Footer</h3>
+    <p class="mb-lg">Wrap buttons or secondary text in <code>.panel-footer</code>. Note that panel footers do not inherit colors and borders when using contextual variations as they are not meant to be in the foreground.</p>
+
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel">
+                <div class="panel-body">
+                    Content.
+                </div>
+                <div class="panel-footer">
+                    Footer Content.
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <h3>Panel Featured</h3>
+    <p class="mb-lg">Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes.</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel panel-featured">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-primary">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-primary</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-primary">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-primary</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-success">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-success</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-success">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-success</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-warning">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-warning</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-warning">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-warning</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-danger">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-danger</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-danger">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-danger</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-info">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-info</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-info">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-info</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-dark">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-dark</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-featured panel-featured-dark">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-featured.panel-featured-dark</code>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <h2>Contextual Alternatives</h2>
+    <p class="mb-lg">Like other components, easily make a panel more meaningful to a particular context by adding any of the contextual state classes.</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel panel-primary">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-primary</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-primary">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-primary</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-success">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-success</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-success">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-success</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-warning">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-warning</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-warning">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-warning</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-danger">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-danger</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-danger">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-danger</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-info">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-info</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-info">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-info</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-dark">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-dark</code>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-dark">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    <code>.panel-dark</code>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <h3>Panel Transparent</h3>
+    <p class="mb-lg">Set the panel to transparent background.</p>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading panel-heading-transparent">
+                    <h2 class="panel-title">Title</h2>
+
+                </header>
+                <div class="panel-body">
+                    Content.
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel panel-transparent">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Title</h2>
+                    <p class="panel-subtitle">Subtitle</p>
+                </header>
+                <div class="panel-body">
+                    Content.
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}

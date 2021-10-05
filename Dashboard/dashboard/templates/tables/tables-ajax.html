@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/select2/select2.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendor/jquery-datatables-bs3/assets/css/datatables.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Tables" parent_dir="Tables" child_dir="Ajax" %}
+    <section class="panel">
+        <header class="panel-heading">
+            <div class="panel-actions">
+                <a href="#" class="fa fa-caret-down"></a>
+                <a href="#" class="fa fa-times"></a>
+            </div>
+            <h2 class="panel-title">Ajax</h2>
+        </header>
+        <div class="panel-body">
+            <table class="table table-bordered table-striped" id="datatable-ajax" data-url="{% static 'ajax/ajax-datatables-sample.js' %}on">
+                <thead>
+                    <tr>
+                        <th width="20%">Rendering engine</th>
+                        <th width="25%">Browser</th>
+                        <th width="25%">Platform(s)</th>
+                        <th width="15%">Engine version</th>
+                        <th width="15%">CSS grade</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </section>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/select2/select2.js' %}"></script>
+    <script src="{% static 'vendor/jquery-datatables/media/js/jquery.dataTables.js' %}"></script>
+    <script src="{% static 'vendor/jquery-datatables-bs3/assets/js/datatables.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/tables/examples.datatables.ajax.js' %}"></script>
+{% endblock %}

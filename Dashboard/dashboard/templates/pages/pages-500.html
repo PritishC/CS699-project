@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body_content %}
+<section class="body-error error-outside">
+    <div class="center-error">
+        {% include "common/error.html" with title="500" message="We're sorry, something went wrong." %}
+    </div>
+</section>
+{% endblock %}

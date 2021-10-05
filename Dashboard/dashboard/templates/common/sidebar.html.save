@@ -1,0 +1,114 @@
+<!-- start: sidebar -->
+<aside id="sidebar-left" class="sidebar-left">
+    <div class="sidebar-header">
+        <div class="sidebar-title">
+            Navigation
+        </div>
+        <div class="sidebar-toggle hidden-xs" data-toggle-class="sidebar-left-collapsed" data-target="html" data-fire-event="sidebar-left-toggle">
+            <i class="fa fa-bars" aria-label="Toggle sidebar"></i>
+        </div>
+    </div>
+    <div class="nano">
+        <div class="nano-content">
+            <nav id="menu" class="nav-main" role="navigation">
+                <ul class="nav nav-main">
+                    <li>
+			
+                        <a href="../mailbox/mailbox-folder.html">
+                            <span class="pull-right label label-primary">182</span><i class="fa fa-envelope" aria-hidden="true"></i><span>Mailbox</span>
+                        </a>
+                    </li>
+                    <li class="nav-parent">
+                        <a><i class="fa fa-copy" aria-hidden="true"></i><span>SNS</span></a>
+                        <ul class="nav nav-children">
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>1. Twitter</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:twitter_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:twitter_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>2. Instagram</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:instagram_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:instagram_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>3. Tiktok</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:tiktok_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:tiktok_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>4. Youtube</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:youtube_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:youtube_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent">
+                        <a><i class="fa fa-copy" aria-hidden="true"></i><span>EC</span></a>
+                        <ul class="nav nav-children">
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>1. Amazon</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:amazon_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:amazon_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>2. Yodobashi</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:yodobashi_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:yodobashi_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="{%  url 'dashboard:twitter_home' %}">3. Bic Camera</a></li>
+                            <li><a href="{%  url 'dashboard:twitter_home' %}">4. Joshin</a></li>
+                            <li><a href="{%  url 'dashboard:twitter_home' %}">5. Kakaku</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-parent">
+                        <a><i class="fa fa-copy" aria-hidden="true"></i><span>Music</span></a>
+                        <ul class="nav nav-children">
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>1. Eggs</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:eggs_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:eggs_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>2. Soundcloud</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:soundcloud_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:soundcloud_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>3. Livefans</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:livefans_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:livefans_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-parent">
+                                <a><i class="fa fa-copy" aria-hidden="true"></i><span>4. Utaten</span></a>
+                                <ul class="nav nav-children">
+                                    <li><a href="{%  url 'dashboard:utaten_home' %}">Home</a></li>
+                                    <li><a href="{%  url 'dashboard:utaten_daily' %}">Daily</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</aside>
+<!-- end: sidebar -->

@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Maps" parent_dir="Maps" child_dir="Basic" %}
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Basic</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="gmap-basic" style="height: 500px; width: 100%;"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Basic with Markers</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="gmap-basic-marker" style="height: 500px; width: 100%;"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Static</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="gmap-static" style="height: 500px; width: 100%;"></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">With Context Menu</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="gmap-context-menu" style="height: 500px; width: 100%;"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Street View</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="gmap-street-view" style="height: 500px; width: 100%;"></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="{% static 'vendor/gmaps/gmaps.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/maps/examples.gmap.js' %}"></script>
+{% endblock %}

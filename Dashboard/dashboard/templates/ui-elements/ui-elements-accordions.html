@@ -1,0 +1,484 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Accordions" %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-accordion">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1One">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1One" class="accordion-body collapse in">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1Two">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1Two" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse1Three">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse1Three" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel-group" id="accordion2">
+                <div class="panel panel-accordion panel-accordion-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2One">
+                                <i class="fa fa-star"></i> Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2One" class="accordion-body collapse in">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2Two">
+                                <i class="fa fa-cogs"></i> Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2Two" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse2Three">
+                                <i class="fa fa-cloud"></i> Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse2Three" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="pb-lg">Toggle</h2>
+            <div class="toggle" data-plugin-toggle>
+                <section class="toggle active">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <div class="toggle-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet.</p></p>
+                    </div>
+                </section>
+                <section class="toggle active">
+                    <label>Curabitur eget leo at imperdiet vague iaculis vitaes?</label>
+                    <div class="toggle-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor.</p>
+                    </div>
+                </section>
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <div class="toggle-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+
+            <h2 class="pb-lg">One Toggle Open At A Time</h2>
+
+            <div class="toggle" data-plugin-toggle data-plugin-options='{ "isAccordion": true }'>
+                <section class="toggle active">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <div class="toggle-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. Proin adipiscing porta tellus, ut feugiat nibh adipiscing sit amet. In eu justo a felis faucibus ornare vel id metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In eu libero ligula. Fusce eget metus lorem, ac viverra leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pellentesque neque eget diam posuere porta. Quisque ut nulla at nunc <a href="#">vehicula</a> lacinia. </p>
+                    </div>
+                </section>
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <div class="toggle-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                    </div>
+                </section>
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <div class="toggle-content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <h2 class="pb-lg">FAQs</h2>
+
+            <div class="toggle" data-plugin-toggle>
+                <section class="toggle active">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                </section>
+
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet viaculis vitaes?</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                </section>
+
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet varius iaculis vitaes?</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                </section>
+
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet vague iaculis vitaes?</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                </section>
+
+                <section class="toggle">
+                    <label>Curabitur eget leo at velit imperdiet viaculis vitaes?</label>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus. Nullam tortor nunc, bibendum vitae semper a, volutpat eget massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer fringilla, orci sit amet posuere auctor, orci eros pellentesque odio, nec pellentesque erat ligula nec massa. Aenean consequat lorem ut felis ullamcorper posuere gravida tellus faucibus. Maecenas dolor elit, pulvinar eu vehicula eu, consequat et lacus. Duis et purus ipsum. In auctor mattis ipsum id molestie. Donec risus nulla, fringilla a rhoncus vitae, semper a massa. Vivamus ullamcorper, enim sit amet consequat laoreet, tortor tortor dictum urna, ut egestas urna ipsum nec libero. Nulla justo leo, molestie vel tempor nec, egestas at massa. Aenean pulvinar, felis porttitor iaculis pulvinar, odio orci sodales odio, ac pulvinar felis quam sit.</p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <h2 class="pb-lg">States</h2>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="panel-group" id="accordionPrimary">
+                <div class="panel panel-accordion panel-accordion-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionPrimary" href="#collapsePrimaryOne">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsePrimaryOne" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionPrimary" href="#collapsePrimaryTwo">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsePrimaryTwo" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-primary">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionPrimary" href="#collapsePrimaryThree">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsePrimaryThree" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel-group" id="accordionSuccess">
+                <div class="panel panel-accordion panel-accordion-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSuccess" href="#collapseSuccessOne">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSuccessOne" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSuccess" href="#collapseSuccessTwo">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSuccessTwo" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-success">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionSuccess" href="#collapseSuccessThree">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseSuccessThree" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel-group" id="accordionWarning">
+                <div class="panel panel-accordion panel-accordion-warning">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionWarning" href="#collapseWarningOne">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWarningOne" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-warning">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionWarning" href="#collapseWarningTwo">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWarningTwo" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-warning">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionWarning" href="#collapseWarningThree">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseWarningThree" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row mt-lg pt-lg">
+        <div class="col-md-4">
+            <div class="panel-group" id="accordionDanger">
+                <div class="panel panel-accordion panel-accordion-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDanger" href="#collapseDangerOne">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDangerOne" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDanger" href="#collapseDangerTwo">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDangerTwo" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-danger">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDanger" href="#collapseDangerThree">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDangerThree" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel-group" id="accordionInfo">
+                <div class="panel panel-accordion panel-accordion-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionInfo" href="#collapseInfoOne">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseInfoOne" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionInfo" href="#collapseInfoTwo">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseInfoTwo" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-info">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionInfo" href="#collapseInfoThree">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseInfoThree" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="panel-group" id="accordionDark">
+                <div class="panel panel-accordion panel-accordion-dark">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDark" href="#collapseDarkOne">
+                                Donec tellus massa
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDarkOne" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa, tristique sit amet condim vel, facilisis quis sapien. Praesent id enim sit amet odio vulputate eleifend in in tortor. Donec tellus massa.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-dark">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDark" href="#collapseDarkTwo">
+                                Praesent id enim
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDarkTwo" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-accordion panel-accordion-dark">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordionDark" href="#collapseDarkThree">
+                                Lorem ipsum dolor
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseDarkThree" class="accordion-body collapse">
+                        <div class="panel-body">
+                            Donec tellus massa, tristique sit amet condimentum vel, facilisis quis sapien.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

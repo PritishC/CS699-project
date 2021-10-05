@@ -1,0 +1,195 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/jstree/themes/default/style.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Tree View" %}
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Basic</h2>
+                    <p class="panel-subtitle">Interactive tree, basic sample.</p>
+                </header>
+                <div class="panel-body">
+                    <div id="treeBasic">
+                        <ul>
+                            <li>
+                                Root Node
+                                <ul>
+                                    <li data-jstree='{ "selected" : true }'>
+                                        <a href="#">Selected Node</a>
+                                    </li>
+                                    <li data-jstree='{ "opened" : true }'>
+                                        Opened Node
+                                        <ul>
+                                            <li data-jstree='{ "disabled" : true }'>
+                                                Disabled Node
+                                            </li>
+                                            <li data-jstree='{ "type" : "file" }'>
+                                                Child Node
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-jstree='{ "icon" : "fa fa-picture-o" }'>
+                                        Custom Icon
+                                    </li>
+                                    <li data-jstree='{ "icon" : "{% static 'images/icon.png' %}" }'>
+                                        Custom Icon Image
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="colored">
+                                Colored
+                            </li>
+                            <li class="colored-icon">
+                                Colored Icon Only
+                            </li>
+                            <li class="folder">
+                                Folder Style
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Ajax</h2>
+                    <p class="panel-subtitle">You can also use AJAX to populate the tree with HTML your server returns.</p>
+                </header>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <h5 class="text-semibold text-dark text-uppercase">HTML</h5>
+                        <div id="treeAjaxHTML"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h5 class="text-semibold text-dark text-uppercase">JSON</h5>
+                        <div id="treeAjaxJSON"></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Checkbox</h2>
+                    <p class="panel-subtitle">Checkbox icons in front of each node.</p>
+                </header>
+                <div class="panel-body">
+                    <div id="treeCheckbox">
+                        <ul>
+                            <li>
+                                Root Node
+                                <ul>
+                                    <li data-jstree='{ "selected" : true }'>
+                                        <a href="#">Selected Node</a>
+                                    </li>
+                                    <li data-jstree='{ "opened" : true }'>
+                                        Opened Node
+                                        <ul>
+                                            <li data-jstree='{ "disabled" : true }'>
+                                                Disabled Node
+                                            </li>
+                                            <li data-jstree='{ "type" : "file" }'>
+                                                Child Node
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li data-jstree='{ "icon" : "fa fa-picture-o" }'>
+                                        Custom Icon
+                                    </li>
+                                    <li data-jstree='{ "icon" : "{% static 'images/icon.png' %}" }'>
+                                        Custom Icon Image
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="colored">
+                                Colored
+                            </li>
+                            <li class="colored-icon">
+                                Colored Icon Only
+                            </li>
+                            <li class="folder">
+                                Folder Style
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Drag &amp; Drop</h2>
+                    <p class="panel-subtitle">Makes it possible to drag and drop tree nodes and rearrange the tree.</p>
+                </header>
+                <div class="panel-body">
+                    <div id="treeDragDrop">
+                        <ul>
+                            <li>
+                                Root Node
+                                <ul>
+                                    <li data-jstree='{ "selected" : true }'>
+                                        <a href="#">Selected Node</a>
+                                    </li>
+                                    <li data-jstree='{ "opened" : true }'>
+                                        Opened Node
+                                        <ul>
+                                            <li data-jstree='{ "type" : "file" }'>
+                                                Child Node
+                                            </li>
+                                            <li data-jstree='{ "type" : "file" }'>
+                                                Child Node 2
+                                            </li>
+                                            <li data-jstree='{ "type" : "file" }'>
+                                                Child Node 3
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                Root Node 2
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jstree/jstree.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/ui-elements/examples.treeview.js' %}"></script>
+{% endblock %}
+

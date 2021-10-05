@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <section role="main" class="content-body">
+        {% include "common/header-right.html" with title="Analyze" parent_dir="Analyze" child_dir="Dashboard" %}
+		<div class="row">
+            <div class="col-md-6">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <div class="panel-actions">
+                            <a href="#" class="fa fa-caret-down"></a>
+                            <a href="#" class="fa fa-times"></a>
+                        </div>
+
+                        <h2 class="panel-title">Keywords Status</h2>
+                    </header>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped mb-none">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Requests</th>
+                                    <th>Status</th>
+                                    <th>Last Updated</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {%  for row in requests_status %}
+                                    <tr>
+                                        <td>{{ row.id }}</td>
+                                        {% if row.is_scheduled %}
+                                        <td>Daily</td>
+                                        {% else %}
+                                        <td>{{ row.condition__search_text}}</td>
+                                        {% endif %}
+                                        <td>{{ row.status }}</td>
+                                        <td>{{ row.time_last_updated }}</td>
+                                    </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section class="panel">
+                    <header class="panel-heading">
+                        <div class="panel-actions">
+                            <a href="#" class="fa fa-caret-down"></a>
+                            <a href="#" class="fa fa-times"></a>
+                        </div>
+
+                        <h2 class="panel-title">Errors</h2>
+                    </header>
+                    <div class="panel-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped mb-none">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Error Code</th>
+                                    <th>Description</th>
+                                    <th>Request Type</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {%  for key, value in Errors.items %}
+                                {%  for error in value %}
+                                {% if forloop.counter0 == 0%}
+                                <tr>
+                                    <td align="center" rowspan='{{ value|length }}' style="vertical-align:top !important;">{{ key }}</td>
+                                    <td>{{ error.code }}</td>
+                                    <td>{{ error.description }}</td>
+                                    {% if error.request__is_scheduled %}
+                                        <td>Daily</td>
+                                    {% else %}
+                                        <td>Initial</td>
+                                    {% endif %}
+
+                                </tr>
+                                {% else%}
+                                <tr>
+                                    <!-- <td>{{ error.id }}</td> -->
+                                    <td>{{ error.code }}</td>
+                                    <td>{{ error.description }}</td>
+                                    {% if error.request__is_scheduled %}
+                                        <td>Daily</td>
+                                    {% else %}
+                                        <td>Initial</td>
+                                    {% endif %}
+
+                                </tr>
+                                {% endif %}
+                                {% endfor %}
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                            <!-- <table class="table table-striped mb-none">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Error Code</th>
+                                    <th>Description</th>
+                                    <th>Status</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {%  for error in Errors %}
+                                <tr>
+                                    <td>{{ error.id }}</td>
+                                    <td>{{ error.code }}</td>
+                                    <td>{{ error.description }}</td>
+                                    <td>{{ error.status }}</td>
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table> -->
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+</section>
+{% endblock content %}
+
+{% block js %}
+	  <script src="{% static 'js/dashboard/twitter_daily.js' %}"></script>
+{% endblock %}

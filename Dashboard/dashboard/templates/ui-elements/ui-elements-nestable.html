@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Nestable" %}
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Nestable List</h2>
+                    <p class="panel-subtitle">Drag & drop hierarchical list with mouse and touch compatibility.</p>
+                </header>
+                <div class="panel-body">
+                    <div class="col-md-6">
+                        <div class="dd" id="nestable">
+                            <ol class="dd-list">
+                                <li class="dd-item" data-id="1">
+                                    <div class="dd-handle">Item 1</div>
+                                </li>
+                                <li class="dd-item" data-id="2">
+                                    <div class="dd-handle">Item 2</div>
+                                    <ol class="dd-list">
+                                        <li class="dd-item" data-id="3"><div class="dd-handle">Item 3</div></li>
+                                        <li class="dd-item" data-id="4"><div class="dd-handle">Item 4</div></li>
+                                        <li class="dd-item" data-id="5">
+                                            <div class="dd-handle">Item 5</div>
+                                            <ol class="dd-list">
+                                                <li class="dd-item" data-id="6"><div class="dd-handle">Item 6</div></li>
+                                                <li class="dd-item" data-id="7"><div class="dd-handle">Item 7</div></li>
+                                                <li class="dd-item" data-id="8"><div class="dd-handle">Item 8</div></li>
+                                            </ol>
+                                        </li>
+                                        <li class="dd-item" data-id="9"><div class="dd-handle">Item 9</div></li>
+                                        <li class="dd-item" data-id="10"><div class="dd-handle">Item 10</div></li>
+                                    </ol>
+                                </li>
+                                <li class="dd-item" data-id="11">
+                                    <div class="dd-handle">Item 11</div>
+                                </li>
+                                <li class="dd-item" data-id="12">
+                                    <div class="dd-handle">Item 12</div>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <textarea id="nestable-output" rows="3" class="form-control"></textarea>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- end: page -->
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jquery-nestable/jquery.nestable.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/ui-elements/examples.nestable.js' %}"></script>
+{% endblock %}
+

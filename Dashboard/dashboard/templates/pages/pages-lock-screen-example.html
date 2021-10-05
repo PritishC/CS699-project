@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Pages" parent_dir="Pages" child_dir="Lock Screen" %}
+    You can use a lockscreen page (<a href="/pages-lock-screen.html">here</a>),
+    or wait <b>10</b> seconds without moving your mouse and pressing any key, to see lock screen modal.
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jquery-idletimer/dist/idle-timer.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/pages/examples.lockscreen.js' %}"></script>
+{% endblock %}
+

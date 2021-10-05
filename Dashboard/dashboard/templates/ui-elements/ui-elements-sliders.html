@@ -1,0 +1,207 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Sliders" %}
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "value": 50, "max": 100 }'></div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body">
+
+                    <div class="mt-lg mb-lg slider-primary" data-plugin-slider data-plugin-options='{ "value": 50, "range": "min", "max": 100 }' data-plugin-slider-output="#listenSlider">
+                        <input id="listenSlider" type="hidden" value="50" />
+                    </div>
+                    <p class="output">The current value is: <b>50</b></p>
+
+                    <div class="mt-lg mb-lg slider-primary" data-plugin-slider data-plugin-options='{ "values": [ 25, 75 ], "range": true, "max": 100 }' data-plugin-slider-output="#listenSlider2">
+                        <input id="listenSlider2" type="hidden" value="25, 75" />
+                    </div>
+                    <p class="output2">The min is: <b class="min">25</b> and the max is: <b class="max">75</b></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "value": 90, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "value": 80, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "value": 70, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "value": 60, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "value": 40, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "value": 30, "range": "max", "max": 100 }'></div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "value": 10, "range": "min", "max": 100 }'></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "value": 20, "range": "min", "max": 100 }'></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "value": 30, "range": "min", "max": 100 }'></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "value": 40, "range": "min", "max": 100 }'></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "range": "min", "max": 100 }'></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "value": 60, "range": "min", "max": 100 }'></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "value": 70, "range": "min", "max": 100 }'></div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body text-center">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "value": 90, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "value": 80, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "value": 70, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "value": 60, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "value": 40, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "value": 30, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body text-center">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "value": 10, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "value": 20, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "value": 30, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "value": 40, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "value": 60, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "value": 70, "range": "max", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "values": [ 15, 25 ], "range": true, "max": 100 }'></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "values": [ 25, 35 ], "range": true, "max": 100 }'></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "values": [ 35, 45 ], "range": true, "max": 100 }'></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "values": [ 45, 55 ], "range": true, "max": 100 }'></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "values": [ 55, 65 ], "range": true, "max": 100 }'></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "values": [ 65, 75 ], "range": true, "max": 100 }'></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "values": [ 75, 85 ], "range": true, "max": 100 }'></div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body text-center">
+
+                    <div class="m-lg"                data-plugin-slider data-plugin-options='{ "values": [ 10, 30 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-primary" data-plugin-slider data-plugin-options='{ "values": [ 20, 40 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-success" data-plugin-slider data-plugin-options='{ "values": [ 30, 50 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-warning" data-plugin-slider data-plugin-options='{ "values": [ 40, 60 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-danger"  data-plugin-slider data-plugin-options='{ "values": [ 50, 70 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-info"    data-plugin-slider data-plugin-options='{ "values": [ 60, 80 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-dark"    data-plugin-slider data-plugin-options='{ "values": [ 70, 90 ], "range": true, "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body">
+
+                    <div class="m-lg slider-gradient"                data-plugin-slider data-plugin-options='{ "value": 90, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-gradient slider-primary" data-plugin-slider data-plugin-options='{ "value": 80, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-gradient slider-success" data-plugin-slider data-plugin-options='{ "value": 70, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-gradient slider-warning" data-plugin-slider data-plugin-options='{ "value": 60, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-gradient slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-gradient slider-info"    data-plugin-slider data-plugin-options='{ "value": 40, "range": "max", "max": 100 }'></div>
+                    <div class="m-lg slider-gradient slider-dark"    data-plugin-slider data-plugin-options='{ "value": 30, "range": "max", "max": 100 }'></div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <div class="panel-body text-center">
+
+                    <div class="m-lg slider-gradient"                data-plugin-slider data-plugin-options='{ "value": 10, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-gradient slider-primary" data-plugin-slider data-plugin-options='{ "value": 20, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-gradient slider-success" data-plugin-slider data-plugin-options='{ "value": 30, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-gradient slider-warning" data-plugin-slider data-plugin-options='{ "value": 40, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-gradient slider-danger"  data-plugin-slider data-plugin-options='{ "value": 50, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-gradient slider-info"    data-plugin-slider data-plugin-options='{ "value": 60, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+                    <div class="m-lg slider-gradient slider-dark"    data-plugin-slider data-plugin-options='{ "value": 70, "range": "min", "max": 100, "orientation": "vertical" }' style="height: 156px;"></div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js' %}"></script>
+    <script src="{% static 'vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Demo Purpose Only -->
+    <script>
+        (function() {
+            $('#listenSlider').change(function() {
+                $('.output b').text(this.value);
+            });
+            $('#listenSlider2').change(function() {
+                var min = parseInt(this.value.split('/')[0], 10);
+                var max = parseInt(this.value.split('/')[1], 10);
+                $('.output2 b.min').text(min);
+                $('.output2 b.max').text(max);
+            });
+        })();
+    </script>
+{% endblock %}
+

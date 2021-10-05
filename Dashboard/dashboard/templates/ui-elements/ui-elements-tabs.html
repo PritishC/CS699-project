@@ -1,0 +1,341 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Tabs" %}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabs">
+                <ul class="nav nav-tabs text-right tabs-primary">
+                    <li class="active">
+                        <a href="#popular7" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent7" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular7" class="tab-pane active">
+                        <p>Popular <code>.nav-tabs.nav-right</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent7" class="tab-pane">
+                        <p>Recent <code>.nav-tabs.nav-right</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- bottom -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs tabs-bottom">
+                <div class="tab-content">
+                    <div id="popular13" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent13" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular13" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent13" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabs tabs-bottom tabs-primary">
+                <div class="tab-content">
+                    <div id="popular14" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent14" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs nav-right">
+                    <li class="active">
+                        <a href="#popular14" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent14" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- justified -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs">
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active">
+                        <a href="#popular10" data-toggle="tab" class="text-center"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent10" data-toggle="tab" class="text-center">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular10" class="tab-pane active">
+                        <p>Popular <code>.nav-tabs.nav-justified</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent10" class="tab-pane">
+                        <p>Recent <code>.nav-tabs.nav-justified</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="tabs tabs-bottom tabs-primary">
+                <div class="tab-content">
+                    <div id="popular8" class="tab-pane active">
+                        <p>Popular <code>.nav-tabs.nav-justified</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent8" class="tab-pane">
+                        <p>Recent <code>.nav-tabs.nav-justified</code></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs nav-justified">
+                    <li class="active">
+                        <a href="#popular8" data-toggle="tab" class="text-center"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent8" data-toggle="tab" class="text-center">Recent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- vertical -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs tabs-vertical tabs-left">
+                <ul class="nav nav-tabs col-sm-3 col-xs-5">
+                    <li class="active">
+                        <a href="#popular11" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent11" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular11" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent11" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabs tabs-vertical tabs-right tabs-primary">
+                <div class="tab-content">
+                    <div id="popular12" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent12" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+                <ul class="nav nav-tabs col-sm-3 col-xs-5">
+                    <li class="active">
+                        <a href="#popular12" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent12" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- states -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs tabs-primary">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular1" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent1" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular1" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent1" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabs tabs-success">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular2" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent2" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular2" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent2" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs tabs-warning">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular3" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent3" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular3" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent3" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabs tabs-danger">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular4" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent4" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular4" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent4" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="tabs tabs-info">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular5" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent5" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular5" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent5" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="tabs tabs-dark">
+                <ul class="nav nav-tabs">
+                    <li class="active">
+                        <a href="#popular6" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
+                    </li>
+                    <li>
+                        <a href="#recent6" data-toggle="tab">Recent</a>
+                    </li>
+                </ul>
+                <div class="tab-content">
+                    <div id="popular6" class="tab-pane active">
+                        <p>Popular</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                    <div id="recent6" class="tab-pane">
+                        <p>Recent</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

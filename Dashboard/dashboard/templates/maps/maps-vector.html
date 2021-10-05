@@ -1,0 +1,150 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/jqvmap/jqvmap.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Maps" parent_dir="Maps" child_dir="Vector" %}
+    <div class="row">
+        <div class="col-xs-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">World</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-world" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "world_en" }'></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">North America</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-north-america" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "north-america_en" }'></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Europe</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-europe" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "europe_en" }'></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Asia</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-asia" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "asia_en" }'></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">South America</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-south-america" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "south-america_en" }'></div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Africa</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-asia" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "africa_en" }'></div>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Oceania</h2>
+                </header>
+                <div class="panel-body">
+                    <div id="vector-map-australia" style="height: 500px; width: 100%;" data-vector-map data-plugin-options='{ "map": "australia_en" }'></div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jqvmap/jquery.vmap.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/data/jquery.vmap.sampledata.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/jquery.vmap.world.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.africa.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.asia.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.australia.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.europe.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.north-america.js' %}"></script>
+    <script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.south-america.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/maps/examples.vector.maps.js' %}"></script>
+{% endblock %}

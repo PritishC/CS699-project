@@ -1,0 +1,352 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block html_class %}fixed sidebar-left-collapsed{% endblock %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/select2/select2.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Maps" parent_dir="Maps" child_dir="Builder" %}
+    <section class="content-with-menu" data-theme-gmap-builder>
+        <div class="content-with-menu-container">
+
+            <div class="inner-menu-toggle">
+                <a href="#" class="inner-menu-expand" data-open="inner-menu">
+                    Show Options <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <menu id="content-menu" class="inner-menu" role="menu">
+                <div class="nano">
+                    <div class="nano-content">
+
+                        <div class="inner-menu-toggle-inside">
+                            <a href="#" class="inner-menu-collapse">
+                                <i class="fa fa-chevron-up visible-xs-inline"></i><i class="fa fa-chevron-left hidden-xs-inline"></i> Hide Options
+                            </a>
+                            <a href="#" class="inner-menu-expand" data-open="inner-menu">
+                                Show Options <i class="fa fa-chevron-down"></i>
+                            </a>
+                        </div>
+
+                        <div class="inner-menu-content">
+
+                            <p class="title">Configuration</p>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="longitude">Map #ID</label>
+                                    <div class="col-xs-12">
+                                        <input id="mapid" name="mapid" class="form-control" value="map" type="text" data-builder-field="mapid">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="separator" />
+
+                            <p class="title">Map Center</p>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="latitude">Latitude</label>
+                                    <div class="col-xs-12">
+                                        <input id="latitude" name="latitude" class="form-control" type="text" data-builder-field="latlng">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="longitude">Longitude</label>
+                                    <div class="col-xs-12">
+                                        <input id="longitude" name="longitude" class="form-control" type="text" data-builder-field="latlng">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="zoomLevel">Zoom Level</label>
+                                    <div class="col-xs-12">
+                                        <select id="zoomLevel" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="zoomlevel">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                            <option value="11">11</option>
+                                            <option value="12">12</option>
+                                            <option value="13">13</option>
+                                            <option value="14">14</option>
+                                            <option value="15">15</option>
+                                            <option value="16">16</option>
+                                            <option value="17">17</option>
+                                            <option value="18">18</option>
+                                            <option value="19">19</option>
+                                            <option value="20">20</option>
+                                            <option value="21">21</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="separator" />
+
+                            <p class="title">Markers</p>
+
+                            <div class="form-group">
+                                <ul id="MarkersList" class="list-markers list-unstyled mb-lg hidden">
+                                </ul>
+
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-primary btn-block mb-lg" type="button" data-toggle="modal" data-target="#MarkerModal">Add</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button id="MarkerRemoveAll" class="btn btn-danger btn-block mb-lg" type="button">Remove All</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="separator" />
+
+                            <p class="title">Settings</p>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="maptypecontrol">Map Type Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="maptypecontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="maptypecontrol">
+                                            <option value="false">None</option>
+                                            <option value="DROPDOWN_MENU">Dropdown Menu</option>
+                                            <option value="HORIZONTAL_BAR" selected="selected">Horizontal Bar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="zoomcontrol">Zoom Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="zoomcontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="zoomcontrol">
+                                            <option value="false">None</option>
+                                            <option value="Small">Small</option>
+                                            <option value="Default" selected>Large</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="scalecontrol">Scale Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="scalecontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="scalecontrol">
+                                            <option value="false">None</option>
+                                            <option selected="selected" value="true">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="streeviewcontrol">Stree View Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="streeviewcontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="streetviewcontrol">
+                                            <option value="false">None</option>
+                                            <option selected="selected" value="true">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="pancontrol">Pan Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="pancontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="pancontrol">
+                                            <option value="false">None</option>
+                                            <option selected="selected" value="true">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="overviewcontrol">Overview Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="overviewcontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="overviewcontrol">
+                                            <option value="false">None</option>
+                                            <option value="Opened">Opened</option>
+                                            <option selected="selected" value="Collapsed">Collapsed</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="draggablecontrol">Draggable Control</label>
+                                    <div class="col-xs-12">
+                                        <select id="draggablecontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="draggablecontrol">
+                                            <option value="false">None</option>
+                                            <option selected="selected" value="true">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="clickzoomcontrol">Double Click to Zoom</label>
+                                    <div class="col-xs-12">
+                                        <select id="clickzoomcontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="clicktozoomcontrol">
+                                            <option value="false">None</option>
+                                            <option selected="selected" value="true">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="scrollwheelcontrol">Mouse Wheel to Zoom</label>
+                                    <div class="col-xs-12">
+                                        <select id="scrollwheelcontrol" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="scrollwheelcontrol">
+                                            <option value="false">None</option>
+                                            <option selected="selected" value="true">Standard</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="maptype">Map Type</label>
+                                    <div class="col-xs-12">
+                                        <select id="maptype" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="maptype">
+                                            <option selected="selected" value="roadmap">Road Map</option>
+                                            <option value="satellite">Satellite</option>
+                                            <option value="hybrid">Hybrid</option>
+                                            <option value="terrain">Terrain</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="col-xs-12 control-label" for="maptheme">Map Theme</label>
+                                    <div class="col-xs-12">
+                                        <select id="maptheme" class="form-control mb-md" data-plugin-selectTwo data-plugin-options='{ "minimumResultsForSearch": -1 }' data-builder-field="maptheme">
+                                            <option value="false" selected="selected">Default</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="separator" />
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-primary btn-block mb-lg" type="button" data-toggle="modal" data-target="#ModalGetCode">Get Code</button>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <button class="btn btn-primary btn-block mb-lg" type="button" data-toggle="modal" data-target="#ModalPreview">Preview</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </menu>
+            <div class="inner-body">
+                <div id="gmap"></div>
+            </div>
+    </section>
+
+    <div id="MarkerModal" class="marker-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="MarkerModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Choose Marker Location</h4>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="MarkerLocation">Address or Latitude and Longitude</label>
+                            <input id="MarkerLocation" name="location" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="MarkerTitle">Title</label>
+                            <input id="MarkerTitle" name="title" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="MarkerDescription">Description</label>
+                            <textarea id="MarkerDescription" name="description" type="text" rows="3" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button id="MarkerSave" type="submit" class="btn btn-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalPreview" class="preview-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalPreview" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Map Preview</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="" style="border: none; width: 100%; height: 70vh;"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="ModalGetCode" class="preview-modal modal fade" tabindex="-1" role="dialog" aria-labelledby="ModalGetCode" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Generated Code</h4>
+                </div>
+                <div class="modal-body">
+                    <pre></pre>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/select2/select2.js' %}"></script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="{% static 'javascripts/maps/snazzy.themes.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/maps/examples.map.builder.js' %}"></script>
+{% endblock %}

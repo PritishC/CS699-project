@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Extra" %}
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Arrows</h2>
+                    <p class="panel-subtitle">Arrows can be used to highlight other elements.</p>
+                </header>
+                <div class="panel-body">
+                    <div class="row center">
+                        <div class="col-md-3">
+                            <span class="arrow vtl"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="arrow vtr"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="arrow vbl"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="arrow vbr"></span>
+                        </div>
+                    </div>
+
+                    <div class="row center mt-lg">
+                        <div class="col-md-3">
+                            <span class="arrow hlb"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="arrow hlt"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="arrow hrb"></span>
+                        </div>
+                        <div class="col-md-3">
+                            <span class="arrow hrt"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Responsive embed</h2>
+                    <p class="panel-subtitle">Allow browsers to determine video or slideshow dimensions based on the width of their containing block by creating an intrinsic ratio that will properly scale on any device.</p>
+                </header>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h5 class="text-semibold text-dark text-uppercase">16:9 aspect ratio</h5>
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="//player.vimeo.com/video/67957799"></iframe>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <h5 class="text-semibold text-dark text-uppercase">4:3 aspect ratio</h5>
+                            <div class="embed-responsive embed-responsive-4by3">
+                                <iframe class="embed-responsive-item" src="//www.youtube.com/embed/iQN06bfOnxo"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- end: page -->
+</section>
+{% endblock content %}

@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <link rel="stylesheet" href="{% static 'vendor/fullcalendar/fullcalendar.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/fullcalendar/fullcalendar.print.css' %}" media="print">
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Pages" parent_dir="Pages" child_dir="Calendar" %}
+    <section class="panel">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-md-9">
+                    <div id="calendar"></div>
+                </div>
+                <div class="col-md-3">
+                    <p class="h4 text-light">Draggable Events</p>
+                    <hr />
+                    <div id='external-events'>
+                        <div class="external-event label label-default" data-event-class="fc-event-default">Default Event</div>
+                        <div class="external-event label label-primary" data-event-class="fc-event-primary">Primary Event</div>
+                        <div class="external-event label label-success" data-event-class="fc-event-success">Success Event</div>
+                        <div class="external-event label label-warning" data-event-class="fc-event-warning">Warning Event</div>
+                        <div class="external-event label label-info" data-event-class="fc-event-info">Info Event</div>
+                        <div class="external-event label label-danger" data-event-class="fc-event-danger">Danger Event</div>
+                        <div class="external-event label label-dark" data-event-class="fc-event-dark">Dark Event</div>
+                        <hr />
+                        <div>
+                            <div class="checkbox-custom checkbox-default ib">
+                                <input id="RemoveAfterDrop" type="checkbox"/>
+                                <label for="RemoveAfterDrop">remove after drop</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js' %}"></script>
+    <script src="{% static 'vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js' %}"></script>
+    <script src="{% static 'vendor/fullcalendar/lib/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/fullcalendar/fullcalendar.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/pages/examples.calendar.js' %}"></script>
+{% endblock %}

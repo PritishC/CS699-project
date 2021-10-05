@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+	<!-- Specific Page Vendor CSS -->
+	<link rel="stylesheet" href="{% static 'vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css' %}" />
+	<link rel="stylesheet" href="{% static 'vendor/bootstrap-multiselect/bootstrap-multiselect.css' %}" />
+	<link rel="stylesheet" href="{% static 'vendor/morris/morris.css' %}" />
+{% endblock %}
+
+{% block content %}
+	<section role="main" class="content-body">
+		{% include "common/header-right.html" with title="Analyze" parent_dir="Analyze" child_dir="Dashboard" %}
+
+		<div class="row">
+			<div class="col-md-6">
+				<section class="panel">
+					<header class="panel-heading">
+						<div class="panel-actions">
+							<a href="#" class="fa fa-caret-down"></a>
+							<a href="#" class="fa fa-times"></a>
+						</div>
+						<h2 class="panel-title">Registered Users</h2>
+                    	<p class="panel-subtitle">A bar chart of registered users</p>
+					</header>
+					<div class="panel-body">
+
+						<div class="chart chart-md" id="flotBars"></div>
+						<script>
+							var registered_user_data = {{ registered_user|safe }};
+						</script>
+
+					</div>
+				</section>
+			</div>
+			<div class="col-md-6">
+			<section class="panel">
+				<header class="panel-heading">
+					<div class="panel-actions">
+						<a href="#" class="fa fa-caret-down"></a>
+						<a href="#" class="fa fa-times"></a>
+					</div>
+
+					<h2 class="panel-title">Errors</h2>
+				</header>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table class="table table-striped mb-none">
+							<thead>
+							<tr>
+								<th>#</th>
+								<th>Error Code</th>
+								<th>Description</th>
+								<th>Request Type</th>
+							</tr>
+							</thead>
+							<tbody>
+							{%  for key, value in Errors.items %}
+							{%  for error in value %}
+							{% if forloop.counter0 == 0%}
+							<tr>
+								<td align="center" rowspan='{{ value|length }}' style="vertical-align:top !important;">{{ key }}</td>
+								<td>{{ error.code }}</td>
+								<td>{{ error.description }}</td>
+								{% if error.request__is_scheduled %}
+									<td>Daily</td>
+								{% else %}
+									<td>Initial</td>
+								{% endif %}
+
+							</tr>
+							{% else%}
+							<tr>
+								<!-- <td>{{ error.id }}</td> -->
+								<td>{{ error.code }}</td>
+								<td>{{ error.description }}</td>
+								{% if error.request__is_scheduled %}
+									<td>Daily</td>
+								{% else %}
+									<td>Initial</td>
+								{% endif %}
+
+							</tr>
+							{% endif %}
+							{% endfor %}
+							{% endfor %}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</section>
+		</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 col-lg-12 col-xl-6">
+			<section class="panel">
+				<div class="panel-body">
+					<div class="row">
+						<div class="col-lg-8">
+							<div class="chart-data-selector" id="salesSelectorWrapper">
+								<h2>
+									Requests:
+									<strong>
+										<select class="form-control" id="salesSelector">
+											<option value="Total" selected>Total</option>
+											<option value="Success" >Success</option>
+											<option value="Failure" >Failure</option>
+										</select>
+									</strong>
+								</h2>
+
+								<div id="salesSelectorItems" class="chart-data-selector-items mt-sm">
+									<div class="chart chart-sm" data-sales-rel="Total" id="flotDashSales1" class="chart-active"></div>
+									<script>
+										var totalRequests = [{{ requests_info.0|safe }}];
+									</script>
+									<div class="chart chart-sm" data-sales-rel="Success" id="flotDashSales2" class="chart-hidden"></div>
+									<script>
+										var successRequests = [{{ requests_info.1|safe }}]
+									</script>
+									<div class="chart chart-sm" data-sales-rel="Failure" id="flotDashSales3" class="chart-hidden"></div>
+									<script>
+										var errorRequests = [{{ requests_info.2|safe }}]
+									</script>
+								</div>
+
+							</div>
+						</div>
+						<div class="col-lg-4 text-center">
+							<h2 class="panel-title mt-md">API Limit</h2>
+							<div class="liquid-meter-wrapper liquid-meter-sm mt-lg">
+								<div class="liquid-meter">
+									<meter min="0" max="100" value="90" id="meterSales"></meter>
+								</div>
+								<div class="liquid-meter-selector" id="meterSalesSel">
+									<a href="#" data-val="90" class="active">Daily Limit</a>
+									<a href="#" data-val="28">Monthly Limit</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			</div>
+		</div>
+</section>
+{% endblock content %}
+
+{% block js_common %}
+	<!-- Specific Page Vendor -->
+	<script src="{% static 'vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js' %}"></script>
+	<script src="{% static 'vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js' %}"></script>
+	<script src="{% static 'vendor/jquery-appear/jquery.appear.js' %}"></script>
+	<script src="{% static 'vendor/bootstrap-multiselect/bootstrap-multiselect.js' %}"></script>
+	<script src="{% static 'vendor/jquery-easypiechart/jquery.easypiechart.js' %}"></script>
+	<script src="{% static 'vendor/flot/jquery.flot.js' %}"></script>
+	<script src="{% static 'vendor/flot-tooltip/jquery.flot.tooltip.js' %}"></script>
+	<script src="{% static 'vendor/flot/jquery.flot.pie.js' %}"></script>
+	<script src="{% static 'vendor/flot/jquery.flot.categories.js' %}"></script>
+	<script src="{% static 'vendor/flot/jquery.flot.resize.js' %}"></script>
+	<script src="{% static 'vendor/jquery-sparkline/jquery.sparkline.js' %}"></script>
+	<script src="{% static 'vendor/raphael/raphael.js' %}"></script>
+	<script src="{% static 'vendor/morris/morris.js' %}"></script>
+	<script src="{% static 'vendor/gauge/gauge.js' %}"></script>
+	<script src="{% static 'vendor/snap-svg/snap.svg.js' %}"></script>
+	<script src="{% static 'vendor/liquid-meter/liquid.meter.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/jquery.vmap.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/data/jquery.vmap.sampledata.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/jquery.vmap.world.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.africa.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.asia.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.australia.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.europe.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.north-america.js' %}"></script>
+	<script src="{% static 'vendor/jqvmap/maps/continents/jquery.vmap.south-america.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+	  <script src="{% static 'js/dashboard/youtube_home.js' %}"></script>
+	  <!-- <script src="{% static 'js/ui-elements/examples.charts.js' %}"></script> -->
+{% endblock %}

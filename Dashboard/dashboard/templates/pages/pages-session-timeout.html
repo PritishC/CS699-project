@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Pages" parent_dir="Pages" child_dir="Session Timeout" %}
+    If you don't move, after 10 seconds lock screen will be shown.
+    <br />
+    After 15 seconds after document ready, a warning will appear asking if user wants to renew a session.
+    <br />
+    If the user doesn't want to, then after 5 more seconds he will be redirected to login page.
+    <br />
+    <br />
+    Note: The code is for demo purposes, you can configure it like you want to.
+    If you don't want a session timeout you can just make a keep alive call from time to time. :)
+    <br />
+    You can find more information looking at source code or at our extensive documentation.
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/jquery-idletimer/dist/idle-timer.js' %}"></script>
+{% endblock %}
+
+{% block js %}
+    <!-- Examples -->
+    <script src="{% static 'js/pages/examples.lockscreen.js' %}"></script>
+    <script src="{% static 'js/pages/examples.session.timeout.js' %}"></script>
+{% endblock %}

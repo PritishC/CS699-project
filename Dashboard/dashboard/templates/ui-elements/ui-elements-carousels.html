@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.carousel.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.theme.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="UI Elements" parent_dir="UI Elements" child_dir="Carousels" %}
+    <div class="owl-carousel" data-plugin-carousel data-plugin-options='{ "autoPlay": 3000, "items": 6, "itemsDesktop": [1199,4], "itemsDesktopSmall": [979,3], "itemsTablet": [768,2], "itemsMobile": [479,1] }'>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-1.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-2.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-3.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-4.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-5.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-6.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-7.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-1.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-2.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-3.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-4.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-5.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-6.jpg' %}" alt=""></div>
+        <div class="item spaced"><img class="img-thumbnail" src="{% static 'images/projects/project-7.jpg' %}" alt=""></div>
+    </div>
+
+    <hr>
+
+    <div class="row mt-lg pt-lg">
+        <div class="col-md-3">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Single Item</h2>
+                </header>
+                <div class="panel-body">
+                    <div class="owl-carousel" data-plugin-carousel data-plugin-options='{ "items": 1, "autoHeight": true }'>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-1.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-2.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-4.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-3">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Navigation</h2>
+                </header>
+                <div class="panel-body">
+                    <div class="owl-carousel" data-plugin-carousel data-plugin-options='{ "items": 1,  "navigation": true, "pagination": false }'>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-2.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-4.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-3">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Autoplay</h2>
+                </header>
+                <div class="panel-body">
+                    <div class="owl-carousel" data-plugin-carousel data-plugin-options='{ "autoPlay": 5000, "items": 1,  "navigation": false, "pagination": true }'>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-7.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-6.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-5.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-3">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+
+                    <h2 class="panel-title">Controls Disabled</h2>
+                </header>
+                <div class="panel-body">
+                    <div class="owl-carousel" data-plugin-carousel data-plugin-options='{ "autoPlay": 2000, "items": 1,  "navigation": false, "pagination": false }'>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-6.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-2.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-4.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-2.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-1.jpg' %}">
+                        </div>
+                        <div class="item">
+                            <img alt="" class="img-responsive" src="{% static 'images/projects/project-7.jpg' %}">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- end: page -->
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/owl-carousel/owl.carousel.js' %}"></script>
+{% endblock %}

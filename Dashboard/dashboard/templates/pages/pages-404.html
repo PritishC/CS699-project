@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Pages" parent_dir="Pages" child_dir="404" %}
+    <section class="body-error error-inside">
+        <div class="center-error">
+            {% include "common/error.html" with title="404" message="We're sorry, but the page you were looking for doesn't exist." %}
+        </div>
+    </section>
+</section>
+{% endblock %}

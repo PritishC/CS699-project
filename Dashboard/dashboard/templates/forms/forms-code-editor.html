@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css_common %}
+    <!-- Specific Page Vendor CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/codemirror/lib/codemirror.css' %}" />
+    <link rel="stylesheet" href="{% static 'vendor/codemirror/theme/monokai.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section role="main" class="content-body">
+    {% include "common/header-right.html" with title="Forms" parent_dir="Forms" child_dir="Code Editor" %}
+    <div class="row">
+        <div class="col-xs-12">
+            <section class="panel">
+                <header class="panel-heading">
+                    <div class="panel-actions">
+                        <a href="#" class="fa fa-caret-down"></a>
+                        <a href="#" class="fa fa-times"></a>
+                    </div>
+                    <h2 class="panel-title">Code Editor</h2>
+                </header>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="#">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textareaDefault">Javascript Editor</label>
+                            <div class="col-md-10">
+                                <textarea class="form-control" rows="10" id="codemirror_js_code" name="code_js" data-plugin-codemirror data-plugin-options='{ "mode": "text/javascript" }'>
+                                    function findSequence(goal) {
+                                        function find( start, history ) {
+                                            if (start === goal) {
+                                                return history;
+                                            } else if ( start > goal ) {
+                                                return null;
+                                            } else {
+                                                return find(start + 5, "(" + history + " + 5)") || find(start * 3, "(" + history + " * 3)");
+                                            }
+                                            return find(1, "1");
+                                        }
+                                    }
+                                </textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textareaDefault">HTML Editor</label>
+                            <div class="col-md-10">
+                                <textarea rows="10" class="form-control" id="codemirror_html_code" name="code_html" data-plugin-codemirror data-plugin-options='{ "mode": "text/html" }'>
+                                    <html style="color: green">
+                                        <!-- this is a comment -->
+                                        <head>
+                                            <title>Mixed HTML Example</title>
+                                            <style type="text/css">
+h1 {font-family: comic sans; color: #f0f;}
+div {background: yellow !important;}
+body {
+    max-width: 50em;
+    margin: 1em 2em 1em 5em;
+}
+                                            </style>
+                                        </head>
+                                        <body>
+                                            <h1>Mixed HTML Example</h1>
+                                            <script>
+                                                function jsFunc(arg1, arg2) {
+                                                    if (arg1 && arg2) document.body.innerHTML = "achoo";
+                                                }
+                                            </script>
+                                        </body>
+                                    </html></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textareaDefault">CSS Editor</label>
+                            <div class="col-md-10">
+                                <textarea rows="10" class="form-control" id="codemirror_css_code" name="code_css" data-plugin-codemirror data-plugin-options='{ "mode": "text/css" }'>
+                                    /* Some example CSS */
+
+                                    @import url("something.css");
+
+                                    body {
+                                    margin: 0;
+                                    padding: 3em 6em;
+                                    font-family: tahoma, arial, sans-serif;
+                                    color: #000;
+                                    }
+
+                                    #navigation a {
+                                    font-weight: bold;
+                                    text-decoration: none !important;
+                                    }
+
+                                    h1 {
+                                    font-size: 2.5em;
+                                    }
+
+                                    h2 {
+                                    font-size: 1.7em;
+                                    }
+
+                                    h1:before, h2:before {
+                                    content: "::";
+                                    }
+
+                                    code {
+                                    font-family: courier, monospace;
+                                    font-size: 80%;
+                                    color: #418A8A;
+                                    }
+                                </textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block js_common %}
+    <!-- Specific Page Vendor -->
+    <script src="{% static 'vendor/codemirror/lib/codemirror.js' %}"></script>
+    <script src="{% static 'vendor/codemirror/addon/selection/active-line.js' %}"></script>
+    <script src="{% static 'vendor/codemirror/addon/edit/matchbrackets.js' %}"></script>
+    <script src="{% static 'vendor/codemirror/mode/javascript/javascript.js' %}"></script>
+    <script src="{% static 'vendor/codemirror/mode/xml/xml.js' %}"></script>
+    <script src="{% static 'vendor/codemirror/mode/htmlmixed/htmlmixed.js' %}"></script>
+    <script src="{% static 'vendor/codemirror/mode/css/css.js' %}"></script>
+{% endblock %}
+

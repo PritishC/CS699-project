@@ -1,0 +1,156 @@
+{
+  'created_at': 'Mon Jun 08 02:21:20 +0000 2020',
+  'id': 1269816753699373064,
+  'id_str': '1269816753699373064',
+  'full_text': '@AmaraLaNegraALN Black  lives  matter',
+  'truncated': False,
+  'display_text_range': [
+    17,
+    35
+  ],
+  'entities': {
+    'hashtags': [],
+    'symbols': [],
+    'user_mentions': [
+      {
+        'screen_name': 'AmaraLaNegraALN',
+        'name': 'AMARA',
+        'id': 148466830,
+        'id_str': '148466830',
+        'indices': [
+          0,
+          16
+        ]
+      }
+    ],
+    'urls': []
+  },
+  'source': '<ahref="http://twitter.com/download/android"rel="nofollow">TwitterforAndroid</a>',
+  'in_reply_to_status_id': 1266354778726170624,
+  'in_reply_to_status_id_str': '1266354778726170624',
+  'in_reply_to_user_id': 148466830,
+  'in_reply_to_user_id_str': '148466830',
+  'in_reply_to_screen_name': 'AmaraLaNegraALN',
+  'user': {
+    'id': 1059603987870171136,
+    'id_str': '1059603987870171136',
+    'name': 'Oscar Rodriguez Murphy',
+    'screen_name': 'OscarRo18185122',
+    'location': 'Florida,USA',
+    'description': 'Gemini',
+    'url': None,
+    'entities': {
+      'description': {
+        'urls': []
+      }
+    },
+    'protected': False,
+    'followers_count': 34,
+    'friends_count': 337,
+    'listed_count': 0,
+    'created_at': 'Tue Nov 06 00:30:51 +0000 2018',
+    'favourites_count': 2100,
+    'utc_offset': None,
+    'time_zone': None,
+    'geo_enabled': True,
+    'verified': False,
+    'statuses_count': 441,
+    'lang': None,
+    'contributors_enabled': False,
+    'is_translator': False,
+    'is_translation_enabled': False,
+    'profile_background_color': 'F5F8FA',
+    'profile_background_image_url': None,
+    'profile_background_image_url_https': None,
+    'profile_background_tile': False,
+    'profile_image_url': 'http://pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6OR_normal.jpg',
+    'profile_image_url_https': 'https://pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6OR_normal.jpg',
+    'profile_link_color': '1DA1F2',
+    'profile_sidebar_border_color': 'C0DEED',
+    'profile_sidebar_fill_color': 'DDEEF6',
+    'profile_text_color': '333333',
+    'profile_use_background_image': True,
+    'has_extended_profile': True,
+    'default_profile': True,
+    'default_profile_image': False,
+    'following': None,
+    'follow_request_sent': None,
+    'notifications': None,
+    'translator_type': 'none'
+  },
+  'geo': None,
+  'coordinates': None,
+  'place': {
+    'id': '4ec01c9dbc693497',
+    'url': 'https: //api.twitter.com/1.1/geo/id/4ec01c9dbc693497.json',
+    'place_type': 'admin',
+    'name': 'Florida',
+    'full_name': 'Florida,USA',
+    'country_code': 'US',
+    'country': 'United States',
+    'contained_within': [],
+    'bounding_box': {
+      'type': 'Polygon',
+      'coordinates': [
+        [
+          [
+            -87.634643,
+            24.396308
+          ],
+          [
+            -79.974307,
+            24.396308
+          ],
+          [
+            -79.974307,
+            31.001056
+          ],
+          [
+            -87.634643,
+            31.001056
+          ]
+        ]
+      ]
+    },
+    'attributes': {}
+  },
+  'contributors': None,
+  'is_quote_status': False,
+  'retweet_count': 0,
+  'favorite_count': 0,
+  'favorited': False,
+  'retweeted': False,
+  'lang': 'en'
+},
+created_at=datetime.datetime(2020, 6, 8, 2, 21, 20), id=1269816753699373064, id_str='1269816753699373064', full_text='@AmaraLaNegraALN Black lives matter', truncated=False, display_text_range=[17, 35], entitie
+s={
+'hashtags': [], 'symbols': [], 'user_mentions': [{'screen_name': 'AmaraLaNegraALN', 'name': 'A  M  A  R  A', 'id': 148466830, 'id_str': '148466830', 'indices': [0, 16]}], 'urls': []}, source='Twitter for And
+roid', source_url='http: //twitter.com/download/android', in_reply_to_status_id=1266354778726170624, in_reply_to_status_id_str='1266354778726170624', in_reply_to_user_id=148466830, in_reply_to_user_id_str='14846
+6830', in_reply_to_screen_name='AmaraLaNegraALN', author=User(_api=<tweepy.api.API object at 0x00000259FA074048>, _json={'id': 1059603987870171136, 'id_str': '1059603987870171136', 'name': 'Oscar Rodriguez Murp
+hy', 'screen_name': 'OscarRo18185122', 'location': 'Florida, USA', 'description': 'Gemini', 'url': None, 'entities': {'description': {'urls': []}}, 'protected': False, 'followers_count': 34, 'friends_count': 33
+7, 'listed_count': 0, 'created_at': 'Tue Nov 06 00:30:51 +0000 2018', 'favourites_count': 2100, 'utc_offset': None, 'time_zone': None, 'geo_enabled': True, 'verified': False, 'statuses_count': 441, 'lang': None
+, 'contributors_enabled': False, 'is_translator': False, 'is_translation_enabled': False, 'profile_background_color': 'F5F8FA', 'profile_background_image_url': None, 'profile_background_image_url_https': None,
+'profile_background_tile': False, 'profile_image_url': 'http://pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6OR_normal.jpg', 'profile_image_url_https': 'https://pbs.twimg.com/profile_images/10599510285
+59331328/5tAaJ6OR_normal.jpg', 'profile_link_color': '1DA1F2', 'profile_sidebar_border_color': 'C0DEED', 'profile_sidebar_fill_color': 'DDEEF6', 'profile_text_color': '333333', 'profile_use_background_image': T
+rue, 'has_extended_profile': True, 'default_profile': True, 'default_profile_image': False, 'following': None, 'follow_request_sent': None, 'notifications': None, 'translator_type': 'none'}, id=1059603987870171
+136, id_str='1059603987870171136', name='Oscar Rodriguez Murphy', screen_name='OscarRo18185122', location='Florida, USA', description='Gemini', url=None, entities={'description': {'urls': []}
+}, protected=False,
+followers_count=34, friends_count=337, listed_count=0, created_at=datetime.datetime(2018, 11, 6, 0, 30, 51), favourites_count=2100, utc_offset=None, time_zone=None, geo_enabled=True, verified=False, statuses_c
+ount=441, lang=None, contributors_enabled=False, is_translator=False, is_translation_enabled=False, profile_background_color='F5F8FA', profile_background_image_url=None, profile_background_image_url_https=None,
+profile_background_tile=False, profile_image_url='http://pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6OR_normal.jpg', profile_image_url_https='https://pbs.twimg.com/profile_images/1059951028559331328
+/5tAaJ6OR_normal.jpg', profile_link_color='1DA1F2', profile_sidebar_border_color='C0DEED', profile_sidebar_fill_color='DDEEF6', profile_text_color='333333', profile_use_background_image=True, has_extended_profi
+le=True, default_profile=True, default_profile_image=False, following=False, follow_request_sent=None, notifications=None, translator_type='none'), user=User(_api=<tweepy.api.API object at 0x00000259FA074048>,
+_json={'id': 1059603987870171136, 'id_str': '1059603987870171136', 'name': 'Oscar Rodriguez Murphy', 'screen_name': 'OscarRo18185122', 'location': 'Florida, USA', 'description': 'Gemini', 'url': None, 'entities
+': {'description': {'urls': []}}, 'protected': False, 'followers_count': 34, 'friends_count': 337, 'listed_count': 0, 'created_at': 'Tue Nov 06 00:30: 51 +0000 2018', 'favourites_count': 2100, 'utc_offset': None, 'time_zone': None, 'geo_enabled': True, 'verified': False, 'statuses_count': 441, 'lang': None, 'contributors_enabled': False, 'is_translator': False, 'is_translation_enabled': False, 'profile_background_colo
+r': 'F5F8FA', 'profile_background_image_url': None, 'profile_background_image_url_https': None, 'profile_background_tile': False, 'profile_image_url': 'http: //pbs.twimg.com/profile_images/1059951028559331328/5t
+AaJ6OR_normal.jpg', 'profile_image_url_https': 'https: //pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6OR_normal.jpg', 'profile_link_color': '1DA1F2', 'profile_sidebar_border_color': 'C0DEED', 'profile_
+sidebar_fill_color': 'DDEEF6', 'profile_text_color': '333333', 'profile_use_background_image': True, 'has_extended_profile': True, 'default_profile': True, 'default_profile_image': False, 'following': None, 'fo
+llow_request_sent': None, 'notifications': None, 'translator_type': 'none'}, id=1059603987870171136, id_str='1059603987870171136', name='Oscar Rodriguez Murphy', screen_name='OscarRo18185122', location='Florida, USA', description='Gemini', url=None, entities={'description': {'urls': []}}, protected=False, followers_count=34, friends_count=337, listed_count=0, created_at=datetime.datetime(2018, 11, 6, 0, 30, 51), favo
+urites_count=2100, utc_offset=None, time_zone=None, geo_enabled=True, verified=False, statuses_count=441, lang=None, contributors_enabled=False, is_translator=False, is_translation_enabled=False, profile_backgr
+ound_color='F5F8FA', profile_background_image_url=None, profile_background_image_url_https=None, profile_background_tile=False, profile_image_url='http://pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6O
+R_normal.jpg', profile_image_url_https='https: //pbs.twimg.com/profile_images/1059951028559331328/5tAaJ6OR_normal.jpg', profile_link_color='1DA1F2', profile_sidebar_border_color='C0DEED', profile_sidebar_fill_co
+lor='DDEEF6', profile_text_color='333333', profile_use_background_image=True, has_extended_profile=True, default_profile=True, default_profile_image=False, following=False, follow_request_sent=None, notificatio
+ns=None, translator_type='none'), geo=None, coordinates=None, place=Place(_api=<tweepy.api.API object at 0x00000259FA074048>, id='4ec01c9dbc693497', url='https://api.twitter.com/1.1/geo/id/4ec01c9dbc693497.json
+', place_type='admin', name='Florida', full_name='Florida, USA', country_code='US', country='United States', contained_within=[], bounding_box=BoundingBox(_api=<tweepy.api.API object at 0x00000259FA074048>, typ
+e='Polygon', coordinates=[[[-87.634643, 24.396308], [-79.974307, 24.396308], [-79.974307, 31.001056], [-87.634643, 31.001056]]]), attributes={}), contributors=None, is_quote_status=False, retweet_count=0, favor
+ite_count=0, favorited=False, retweeted=False, lang='en')

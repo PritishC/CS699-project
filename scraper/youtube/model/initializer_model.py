@@ -19,12 +19,6 @@ def stringToInt(text):
 	elif 'K' in text:
 		text = text.replace(u'K', u'')
 		text = float(text)*1000
-	elif '万' in text:
-		text = text.replace(u'万', u'')
-		text = float(text)*10000
-	elif '億' in text:
-		text = text.replace(u'億', u'')
-		text = float(text)*100000000
 
 	try:
 		return int(text)
@@ -39,8 +33,6 @@ def filter_subscribers(text):
 	else:
 		text = text.replace(u'subscribers', u' ')
 		text = text.replace(u'subscriber', u' ')
-		text = text.replace(u'チャンネル登録者数', u' ')
-		text = text.replace(u'人', u' ')
 		text = text.replace(u',', u'')
 		text = text.replace(u'+', u' ')
 		text = text.replace(u'\\n', u' ')
@@ -54,12 +46,8 @@ def filter_views(text):
 		text = text.replace(u'No views', u'0')
 		text = text.replace(u'views', u' ')
 		text = text.replace(u'view', u' ')
-		text = text.replace(u'回視聴', u' ')
-		text = text.replace(u'視聴回数', u' ')
-		text = text.replace(u'回', u' ')
 		text = text.replace(u'watching', u' ')
 		text = text.replace(u'now', u' ')
-		text = text.replace(u'人が視聴中', u' ')
 		text = text.replace(u'Recommended for you', u' ')
 		text = text.replace(u',', u'')
 		text = text.replace(u'+', u' ')
@@ -72,9 +60,7 @@ def filter_date(text):
 		return None
 	else:
 		text = text.replace(u'Joined', u' ')
-		text = text.replace(u'に登録', u' ')
 		text = text.replace(u'Premiered', u' ')
-		text = text.replace(u'に公開済み', u' ')
 		text = text.replace(u'\\n', u' ')
 		text = ' '.join(text.split())
 	return stringToDate(text)

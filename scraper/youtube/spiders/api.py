@@ -61,7 +61,7 @@ class SearchSpider(scrapy.Spider):
 					'Referer': referer,
 					# 'X-YouTube-Client-Name': '1',
 					# 'X-YouTube-Client-Version': '2.20200422.04.00',
-					'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+					'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 				}
 				params = {
 					'search_query': self.keyword,
@@ -81,7 +81,7 @@ class SearchSpider(scrapy.Spider):
 					'sp': self.filters,
 				}
 				headers = {
-					'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+					'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 					# 'USER-AGENT':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0',
 				}
 				url = url + '?' + urlencode(params)
@@ -133,7 +133,7 @@ class ChannelVideosSpider(scrapy.Spider):
 					'Referer': referer,
 					'X-YouTube-Client-Name': '1',
 					'X-YouTube-Client-Version': '2.20200422.04.00',
-					'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+					'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 					# 'USER-AGENT':'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'
 				}
 				params = {
@@ -145,7 +145,7 @@ class ChannelVideosSpider(scrapy.Spider):
 			else:
 				url = endpoints.get_channel_videos_link(self.channelId)
 				headers = {
-					'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+					'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 				}
 				yield scrapy.Request(url=self.client.scrapyGet(url=url, headers=headers), headers=headers, callback=self.parse_search, method='GET', meta={'unique_id': self.unique_id, 'id': self.channelId}, errback=self.errback_httpbin)
 				# yield scrapy.Request(url=url, callback=self.parse_search, method='GET', meta={'unique_id': self.unique_id, 'id': self.channelId}, errback=self.errback_httpbin)
@@ -189,14 +189,14 @@ class ChannelSpider(scrapy.Spider):
 		if hasattr(self, 'channelId'):
 			url = endpoints.get_channel_info_link(self.channelId)
 			headers = {
-				'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+				'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 			}
 			yield scrapy.Request(url=self.client.scrapyGet(url=url, headers=headers), headers=headers, callback=self.parse_channel, method='GET', meta={'unique_id': self.unique_id, 'id': self.channelId}, errback=self.errback_httpbin)
 			# yield scrapy.Request(url=url, callback=self.parse_channel, method='GET', meta={'unique_id': self.unique_id, 'id': self.channelId}, errback=self.errback_httpbin)
 		elif hasattr(self, 'userId'):
 			url = endpoints.get_channel_info_link2(self.userId)
 			headers = {
-				'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+				'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 			}
 			yield scrapy.Request(url=self.client.scrapyGet(url=url, headers=headers), headers=headers, callback=self.parse_channel, method='GET', meta={'unique_id': self.unique_id, 'id': self.userId}, errback=self.errback_httpbin)
 		else:
@@ -230,7 +230,7 @@ class VideoSpider(scrapy.Spider):
 	def start_requests(self):
 		if hasattr(self, 'videoId'):
 			headers = {
-				'accept-language': 'ja,en;q=0.9,en-US;q=0.8,und;q=0.7',
+				'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 			}
 			url = endpoints.get_media_json_link(self.videoId)
 			yield scrapy.Request(url=self.client.scrapyGet(url=url, headers=headers), headers=headers, callback=self.parse_media, method='GET', meta={'unique_id': self.unique_id, 'id': self.videoId}, errback=self.errback_httpbin)

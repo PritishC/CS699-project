@@ -8,7 +8,7 @@ LOG_FILE = 'error.log'
 
 ROBOTSTXT_OBEY = False
 
-HTTP_PROXY = 'http://127.0.0.1:8118'
+# HTTP_PROXY = 'http://127.0.0.1:8118'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:75.0) Gecko/20100101 Firefox/75.0'
 # DEFAULT_REQUEST_HEADERS = {}
 
@@ -24,7 +24,6 @@ PROXY_POOL_ENABLED = False
 # PROXY_POOL_TRY_WITH_HOST = False
 # PROXY_POOL_PAGE_RETRY_TIMES = 10
 # PROXY_POOL_FORCE_REFRESH = True
-# PROXY_POOL_FILTER_CODE = 'jp'
 
 DOWNLOADER_MIDDLEWARES = {
 	# 'youtube.middlewares.ProxyMiddleware': 543,

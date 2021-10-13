@@ -79,6 +79,14 @@ def get_data_json(response_body):
 			return json.loads(value[0])	
 	return None
 
+def get_data_json2(response_body):
+	html = codecs.decode(response_body, encoding='utf-8', errors='ignore')
+	data_regex = re.compile(r'var ytInitialPlayerResponse = (.*);var')
+	data = data_regex.findall(html)
+	if len(data) > 0:
+		return json.loads(data[0])
+	return None
+
 
 def get_ajax_json(response_body):
 	data = codecs.decode(response_body, encoding='utf-8', errors='ignore')

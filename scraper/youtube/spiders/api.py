@@ -97,6 +97,7 @@ class SearchSpider(scrapy.Spider):
 		item["unique_id"] = response.meta['unique_id']
 		item["search"] = Search({'data': data, 'keyword': response.meta['keyword'], 'filters': response.meta['filters']})
 		item["error"] = None
+		print(item)
 		yield item
 
 	def parse_ajax_search(self, response):
@@ -158,6 +159,7 @@ class ChannelVideosSpider(scrapy.Spider):
 		item["unique_id"] = response.meta['unique_id']
 		item["channel_videos"] = ChannelVideosList({'data': data, 'id': response.meta['id']})
 		item["error"] = None
+		print(item)
 		yield item
 
 	def parse_ajax_search(self, response):
@@ -208,6 +210,7 @@ class ChannelSpider(scrapy.Spider):
 		item["unique_id"] = response.meta['unique_id']
 		item["account"] = Account({'id': response.meta['id'], 'data': data})
 		item["error"] = None
+		print(item)
 		yield item
 
 	def errback_httpbin(self, failure):
@@ -232,21 +235,27 @@ class VideoSpider(scrapy.Spider):
 			headers = {
 				'accept-language': 'en;q=0.9,en-US;q=0.8,und;q=0.7',
 			}
-			url = endpoints.get_media_json_link(self.videoId)
+			# url = endpoints.get_media_json_link(self.videoId)
+			url = endpoints.get_media_page_link(self.videoId)
 			yield scrapy.Request(url=self.client.scrapyGet(url=url, headers=headers), headers=headers, callback=self.parse_media, method='GET', meta={'unique_id': self.unique_id, 'id': self.videoId}, errback=self.errback_httpbin)
 		else:
 			raise UsageError("Invalid --videoId value, use videoId=VALUE(str)")
 
 	def parse_media(self, response):
 		item = MediaItem()
-		data = endpoints.get_xml_json(response.body)
+		# data = endpoints.get_xml_json(response.body)
+		# if len(data) > 1:
+		# 	item["media"] = Media({'data': data[0], 'id': response.meta['id'], 'xdata': data[1]})
+		# elif len(data) > 0:
+		# 	item["media"] = Media({'data': data[0], 'id': response.meta['id'], 'xdata': None})
+		# else:
+		# 	item["media"] = None
+		data = endpoints.get_data_json(response.body)
+		data2 = endpoints.get_data_json2(response.body)
+		# with open('source.json', 'w') as file:
+		# 	json.dump(data2, file)
+		item["media"] = Media({'id': response.meta['id'], 'data': data, 'data2': data2})
 		item["unique_id"] = response.meta['unique_id']
-		if len(data) > 1:
-			item["media"] = Media({'data': data[0], 'id': response.meta['id'], 'xdata': data[1]})
-		elif len(data) > 0:
-			item["media"] = Media({'data': data[0], 'id': response.meta['id'], 'xdata': None})
-		else:
-			item["media"] = None
 		item["error"] = None
 		yield item
 
@@ -256,4 +265,3 @@ class VideoSpider(scrapy.Spider):
 		item["media"] = None
 		item["error"] = ExceptionClass.from_errback(failure)
 		yield item
-

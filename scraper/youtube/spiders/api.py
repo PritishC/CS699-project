@@ -257,6 +257,7 @@ class VideoSpider(scrapy.Spider):
 		item["media"] = Media({'id': response.meta['id'], 'data': data, 'data2': data2})
 		item["unique_id"] = response.meta['unique_id']
 		item["error"] = None
+		print(item)
 		yield item
 
 	def errback_httpbin(self, failure):

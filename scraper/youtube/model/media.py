@@ -180,8 +180,8 @@ class Media(InitializerModel):
 									contents = results["results"]["contents"]
 									for content in contents:
 										if "videoPrimaryInfoRenderer" in content:
-											
-											self.title = self._get_simpleText(content["videoPrimaryInfoRenderer"]["title"])
+											if "title" in content["videoPrimaryInfoRenderer"]:
+												self.title = self._get_simpleText(content["videoPrimaryInfoRenderer"]["title"])
 											
 											if "viewCount" in content["videoPrimaryInfoRenderer"]:
 												viewObj = content["videoPrimaryInfoRenderer"]["viewCount"]
@@ -238,6 +238,25 @@ class Media(InitializerModel):
 				if views != None or likes != None or dislikes != None:												
 					self.statistics = _Statistics(views, likes, dislikes)
 				
+				if "videoDetails" in value:
+					if "lengthSeconds" in value["videoDetails"]:
+						self.duration = self.convert_duration(value["videoDetails"]["lengthSeconds"])
+
+					if "thumbnail" in value["videoDetails"]:
+							thumbnail = value["videoDetails"]["thumbnail"]
+							if "thumbnails" in thumbnail:
+								images = thumbnail["thumbnails"]
+								if len(images) > 0:
+									self.thumbnail_url = self._fullURL(images[-1]["url"])
+				if "microformat" in value:
+					if "playerMicroformatRenderer" in value["microformat"]:
+						microformat = value["microformat"]["playerMicroformatRenderer"]
+						if "category" in microformat:
+							if self.genre == None:
+								self.genre = self._get_simpleText(microformat["category"])					
+
+		if prop == 'data2':
+			if value != None:
 				if "videoDetails" in value:
 					if "lengthSeconds" in value["videoDetails"]:
 						self.duration = self.convert_duration(value["videoDetails"]["lengthSeconds"])
